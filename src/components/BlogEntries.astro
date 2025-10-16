@@ -1,0 +1,103 @@
+---
+const articles = [
+  {
+    title: "Understanding Astro Components",
+    summary: "A quick introduction to building fast and modern websites using Astro's component model.",
+    link: "/blog/astro-components"
+  },
+  {
+    title: "Why Choose Astro for Frontend",
+    summary: "See the unique benefits that Astro brings to web development and what sets it apart from others.",
+    link: "/blog/why-astro"
+  },
+  {
+    title: "Getting Started: Your First Astro Project",
+    summary: "Follow these steps to bootstrap and launch your very first Astro-powered site.",
+    link: "/blog/getting-started"
+  }
+];
+---
+
+<div class="blog-list-container">
+  <h2>Latest Articles</h2>
+  <div class="articles">
+    {articles.map(article => (
+      <div class="article-card">
+        <h3>{article.title}</h3>
+        <p>{article.summary}</p>
+        <a href={article.link} class="read-more">Read More</a>
+      </div>
+    ))}
+  </div>
+</div>
+
+<style>
+  .blog-list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 0;
+  }
+
+  .blog-list-container h2 {
+    text-align: center;
+    margin-bottom: 24px;
+    font-size: 2em;
+    font-weight: 600;
+  }
+
+  .articles {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .article-card {
+    background: #fafbfc;
+    border-radius: 10px;
+    box-shadow: 0 2px 14px rgba(60,60,140,0.10);
+    padding: 20px 24px;
+    max-width: 270px;
+    min-width: 210px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: box-shadow 0.2s;
+  }
+
+  .article-card:hover {
+    box-shadow: 0 4px 22px rgba(60,60,140,0.18);
+  }
+
+  .article-card h3 {
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 1.2em;
+  }
+
+  .article-card p {
+    font-size: 1em;
+    margin-bottom: 18px;
+    color: #555c67;
+  }
+
+  .read-more {
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(83.21deg, #3245ff 0%, #bc52ee 100%);
+    padding: 8px 18px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: background 0.2s;
+    display: inline-block;
+  }
+
+  .read-more:hover {
+    background: linear-gradient(83.21deg, #2637d5 0%, #9e44bf 100%);
+  }
+</style>
