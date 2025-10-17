@@ -1,0 +1,25 @@
+---
+const { frontmatter } = Astro.props;
+---
+<meta charset="utf-8" />
+<div class="post-layout">
+  <h1>{frontmatter.title}</h1>
+  <p>Written by {frontmatter.author}</p>
+  <p>Published on: {frontmatter.pubDate.toString().slice(0,10)}</p>
+  <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
+  <slot />
+</div>
+<style>
+  .post-layout {
+    background: #e3f2fd url('{frontmatter.image?.url}') center/cover no-repeat;
+    color: black;        /* default font color */
+    padding: 2rem;
+    border-radius: 10px;
+  }
+  .post-layout h1 {
+    color: red;
+  }
+  .post-layout p {
+    color: gray;
+  }
+</style>
