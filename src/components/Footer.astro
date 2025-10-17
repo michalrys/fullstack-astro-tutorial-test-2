@@ -1,4 +1,6 @@
 ---
+import Social from "./Social.astro";
+
 const githubTitle = "Visit our GitHub";
 const twitterTitle = "Follow us on Twitter";
 const facebookTitle = "Like us on Facebook";
@@ -9,10 +11,10 @@ const instagramTitle = "Follow us on Instagram";
   <div class="footer-content">
     <span>&copy; 2024 Dummy Company. All rights reserved.</span>
     <div class="footer-links">
-      <a href="https://github.com/dummy" target="_blank" rel="noopener" title={githubTitle}>GitHub</a>
-      <a href="https://twitter.com/dummy" target="_blank" rel="noopener" title={twitterTitle}>Twitter</a>
-      <a href="https://facebook.com/dummy" target="_blank" rel="noopener" title={facebookTitle}>Facebook</a>
-      <a href="https://instagram.com/dummy" target="_blank" rel="noopener" title={instagramTitle}>Instagram</a>
+      <Social title="GitHub" platform="github" username="stev.o" />
+      <Social title="twiTTer" platform="twitter" username="steven.o" />
+      <Social title="Facebook" platform="facebook" username="jobss.steev" />
+      <Social title="Instagramo" platform="instagram" username="stev.o" />
     </div>
   </div>
 </footer>
