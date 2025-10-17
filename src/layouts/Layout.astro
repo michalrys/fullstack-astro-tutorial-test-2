@@ -1,4 +1,6 @@
 ---
+import FooterSmall from "../components/FooterSmall.astro";
+
 const title = "Astro tutorial - simple blog";
 export const author = {
 	firstName : "Steve",
@@ -18,6 +20,7 @@ export const author = {
 	</head>
 	<body>
 		<slot />
+		<FooterSmall />
 	</body>
 </html>
 
