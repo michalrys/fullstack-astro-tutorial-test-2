@@ -1,6 +1,7 @@
 ---
 import astroLogo from "../assets/astro.svg";
 import background from "../assets/background.svg";
+import { author } from "../layouts/Layout.astro";
 
 const aboutMe = "About the author"
 ---
@@ -16,6 +17,8 @@ const aboutMe = "About the author"
 				alt="Astro Logo"
 			/>
 			<h1>Welcome to the Astro Tutorial 1!</h1>
+			<section>My name is {author.firstName}. Nice to see you here.</section>
+			<section>My hobbies are: <ul>{author.hobbies.map((h) => <li>{h}</li>)}</ul></section>
 			<p>
 				This is a simple welcome page for the Astro Basics Tutorial. Here you'll learn how to get started building fast, modern websites with Astro.
 			</p>
@@ -30,6 +33,7 @@ const aboutMe = "About the author"
 				<a class="button" href="/about">{aboutMe}</a>
 				<a class="button" href="https://docs.astro.build">Astro Documentation</a>
 			</section>
+			<br/>
 		</section>
 	</main>
 </div>

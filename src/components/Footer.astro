@@ -1,0 +1,55 @@
+---
+const githubTitle = "Visit our GitHub";
+const twitterTitle = "Follow us on Twitter";
+const facebookTitle = "Like us on Facebook";
+const instagramTitle = "Follow us on Instagram";
+---
+
+<footer class="footer">
+  <div class="footer-content">
+    <span>&copy; 2024 Dummy Company. All rights reserved.</span>
+    <div class="footer-links">
+      <a href="https://github.com/dummy" target="_blank" rel="noopener" title={githubTitle}>GitHub</a>
+      <a href="https://twitter.com/dummy" target="_blank" rel="noopener" title={twitterTitle}>Twitter</a>
+      <a href="https://facebook.com/dummy" target="_blank" rel="noopener" title={facebookTitle}>Facebook</a>
+      <a href="https://instagram.com/dummy" target="_blank" rel="noopener" title={instagramTitle}>Instagram</a>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    width: 100%;
+    background: #222d3b;
+    color: #fff;
+    padding: 24px 0 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer-content {
+    width: 90%;
+    max-width: 950px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  .footer-links {
+    display: flex;
+    gap: 18px;
+  }
+  .footer-links a {
+    color: #f8f8f8;
+    text-decoration: none;
+    font-weight: 500;
+    background: rgba(255,255,255,0.08);
+    padding: 6px 12px;
+    border-radius: 5px;
+    transition: background 0.18s, color 0.18s;
+  }
+  .footer-links a:hover {
+    background: #4266ee;
+    color: #fff;
+  }
+</style>
